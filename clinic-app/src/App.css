@@ -1,0 +1,683 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+/* LoginSingup */
+.sign-login {
+    color: #1e293b;
+}
+.inscription-page {
+    background-color: #f8fafc;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    -ms-overflow-style: none;
+}
+
+.main-container {
+    margin: 50px 0;
+}
+
+.form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.form {
+    background-color: white;
+    width: 375px;
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.div-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-field {
+    height: 40px;
+    width: 300px;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    outline: none; 
+}
+
+.input-field:focus {
+    border: 1px solid #0077CC;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.button-field {
+    background-color: #0077CC;
+    color: white;
+    height: 40px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-field:hover {
+    background-color: #0077ccc8;
+}
+
+.subtitle {
+    color: #555;
+}
+
+.a-field {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.exemple {
+    background-color: rgba(220, 220, 220, 0.169);
+    color: #201f1f;
+    width: 300px;
+    margin-top: 10px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.comptes-test {
+    color: #555 !important;
+    margin-top: 6px;
+}
+
+/* Reservation */
+
+.reservation {
+    background-color: #f8fafc;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.prendre-rendez-vous {
+    margin-top: 40px;
+    margin-left: 70px;
+    color: black;
+}
+
+.reservation-sous-titre {
+    color: #64748b;
+    margin: 10px 70px;
+}
+
+/* Calendrier */
+
+.Calendrier {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 740px; 
+    height: 700px;  
+    margin-left: 70px;
+}
+
+.boutons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.boutons button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #999;
+    padding: 1px 7px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.boutons button:hover {
+    background-color: #f0f0f0;
+}
+
+.jours {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: 500;
+    color: #999;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+}
+
+.jours span {
+    padding: 10px 0;
+}
+
+.date {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 5px;
+}
+
+
+.jour {
+    padding: 12px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    box-sizing: border-box;
+    height: 90px; 
+    width: 90px; 
+}
+
+.jour:hover:not(.desactive) {
+    background-color: #f0f0f0;
+} 
+
+.jour.estSelectionne {
+    background-color: #007bff;
+    color: white ;
+    border: none;
+}
+
+.jour.desactive {
+    color: #ccc ;
+    cursor: not-allowed ;
+    background-color: transparent ;
+}
+
+.date span:empty {
+    visibility: hidden;
+}
+
+/* RendezVous */
+
+.calendar-rendezVous {
+    display: flex;
+    gap: 35px;
+}
+
+.RendezVous {
+    width: 360px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.RendezVous-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.RendezVous-header img {
+    width: 44px;
+    height: 44px;
+}
+
+.votre-rendez-vous {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.RendezVous-body {
+    background: white;
+    border-radius: 16px;
+}
+
+.RendezVous-body-header,
+.RendezVous-body-body {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #f8fafc;
+    padding: 14px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+
+.RendezVous-body-header img,
+.RendezVous-body-body img {
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 50%;
+    background: #e0edff;
+}
+
+.RendezVous-body-body img {
+    background: #10b98129;
+}
+
+.RendezVous-date p:first-child,
+.RendezVous-heure p:first-child {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 2px;
+}
+
+.RendezVous-date p:last-child,
+.RendezVous-heure p:last-child {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.motif-consultation {
+    margin-top: 14px;
+}
+
+.motif-consultation p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 6px;
+}
+
+.motif-consultation input {
+    width: 100%;
+    height: 90px;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    outline: none;
+    font-size: 14px;
+    background: #ffffff;
+}
+
+.motif-consultation input::placeholder {
+    color: #9ca3af;
+}
+
+.confirmer {
+    width: 100%;
+    margin-top: 16px;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    background: #9bb7f5;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.confirmer:hover {
+    background: #7fa2f0;
+}
+
+.validation {
+    background-color: #10b98110;
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+}
+
+.validation img {
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.validation p {
+    color: #10b981;
+}
+
+/* AvailableTime */
+
+.container-creneaux {
+    background-color: white;
+    width: 740px;
+    margin: 10px 0 40px 70px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+}
+
+.AvailableTime-header {
+    display: flex;
+    align-items: center;
+}
+
+.AvailableTime-header p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.AvailableTime-header img {
+    width: 42px;
+    height: 42px;
+}
+
+.AvailableTime-body {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AvailableTime-body p {
+    color: #9ca3af;
+} 
+
+/* 2eme partie */
+
+.creneaux {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 16px;
+}
+
+.creneaux-matin,
+.creneaux-apres-midi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.creneaux-matin p,
+.creneaux-apres-midi p {
+    width: 100%;
+    font-size: 0.875rem;
+    font-weight: 1.25rem;
+    color: #9ca3af;
+    margin-bottom: 6px;
+    text-transform: capitalize;
+}
+
+.creneaux-matin span,
+.creneaux-apres-midi span {
+    min-width: 100px;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background: #f8f9fa;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.creneaux-matin span:hover,
+.creneaux-apres-midi span:hover {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.creneau-selectionne {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.creneau-indisponible {
+    background-color: #f0f0f0 !important;
+    color: #999 !important;
+    text-decoration: line-through;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media screen and (max-width: 1200px) {
+    .calendar-rendezVous {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .Calendrier,
+    .container-creneaux {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .RendezVous {
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* LoginSingup responsive */
+    .form {
+        width: 90%;
+        max-width: 400px;
+        padding: 20px 15px;
+    }
+    
+    .input-field,
+    .button-field,
+    .exemple {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Reservation responsive */
+    .prendre-rendez-vous,
+    .reservation-sous-titre {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+    }
+    
+    .reservation-sous-titre {
+        font-size: 14px;
+    }
+    
+    /* Calendrier responsive */
+    .Calendrier {
+        width: 95%;
+        height: auto;
+        padding: 15px;
+        margin: 0 auto;
+    }
+    
+    .jour {
+        height: 70px;
+        width: 70px;
+        padding: 8px 0;
+        font-size: 0.85em;
+    }
+    
+    /* AvailableTime responsive */
+    .container-creneaux {
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px 15px;
+    }
+    
+    .creneaux-matin span,
+    .creneaux-apres-midi span {
+        min-width: 80px;
+        padding: 10px 5px;
+        font-size: 13px;
+    }
+    
+    /* RendezVous responsive */
+    .RendezVous {
+        width: 95%;
+        padding: 20px 15px;
+    }
+    
+    .RendezVous-header img,
+    .RendezVous-body-header img,
+    .RendezVous-body-body img,
+    .validation img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .votre-rendez-vous {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-container {
+        margin: 30px 0;
+    }
+    
+    .form-header {
+        margin-bottom: 20px;
+    }
+    
+    .form {
+        width: 95%;
+        padding: 15px 10px;
+    }
+    
+    .input-field,
+    .button-field {
+        height: 45px;
+    }
+    
+    .prendre-rendez-vous {
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+    
+    .Calendrier {
+        padding: 10px;
+    }
+    
+    .jour {
+        height: 60px;
+        width: 60px;
+        padding: 6px 0;
+        font-size: 0.8em;
+    }
+    
+    .jours span {
+        padding: 8px 0;
+        font-size: 0.75em;
+    }
+    
+    .boutons button {
+        font-size: 1.2em;
+        padding: 3px 10px;
+    }
+    
+    .calendar-header {
+        font-size: 1em;
+    }
+    
+    .creneaux-matin span,
+    .creneaux-apres-midi span {
+        min-width: 70px;
+        padding: 8px 3px;
+        font-size: 12px;
+    }
+    
+    .creneaux {
+        gap: 15px;
+    }
+    
+    .RendezVous-body-header,
+    .RendezVous-body-body {
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .RendezVous-date p:last-child,
+    .RendezVous-heure p:last-child {
+        font-size: 14px;
+    }
+    
+    .motif-consultation input {
+        height: 80px;
+    }
+    
+    .confirmer {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .jour {
+        height: 50px;
+        width: 50px;
+        padding: 5px 0;
+        font-size: 0.75em;
+    }
+    
+    .creneaux-matin span,
+    .creneaux-apres-midi span {
+        min-width: 60px;
+        font-size: 11px;
+    }
+    
+    .form {
+        padding: 12px 8px;
+    }
+    
+    .input-field,
+    .button-field {
+        height: 42px;
+    }
+    
+    .exemple {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .calendar-rendezVous {
+        justify-content: center;
+        padding: 0 50px;
+    }
+    
+    .Calendrier {
+        margin-left: 100px;
+    }
+    
+    .container-creneaux {
+        margin-left: 100px;
+    }
+}

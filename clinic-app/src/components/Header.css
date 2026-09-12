@@ -1,0 +1,147 @@
+.header {
+  width: 100vw ;
+  min-height: 80vh; 
+  margin-left: calc(50% - 50vw);/* ajuste selon ton design */
+  overflow: hidden;
+  background: linear-gradient(135deg, #2563eb 0%, #114fd7 100%);
+  display: flex;        /* active Flexbox */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.header-content {
+    flex: 1;
+  width: 85%;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-self: center; 
+  display: flex;
+  flex-direction: column; /* empile verticalement */
+  align-items: flex-start; /* ou center selon besoin horizontal */
+  gap: 1rem;
+  
+}
+
+h1{
+    font-size: 2.5rem;
+    color: white;
+}
+p{
+    font-size: 1rem;
+    color: white;
+}
+
+.actions{
+    display: flex;
+    gap: 10px;
+}
+
+.rendez-btn{
+    all: unset;
+    background-color: white;
+    color: #2563eb;
+    padding: 1rem 2rem;
+    border-radius: 0.7rem;
+    cursor: pointer;
+}
+.nos-services{
+    all: unset;
+    background-color: #2563eb;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.7rem;
+    border:2px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.rendez-btn:hover{
+    transform: scale(1.02);
+}
+
+.nos-services:hover{
+    filter: brightness(110%);
+}
+
+/*=======================right design=========================*/
+.header-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visual-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    background-color: #3269e2; /* Ta couleur spécifique */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+.visual-container::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background-color: #5f8ae9; 
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.heart-icon {
+    position: relative;
+    z-index: 2;
+    width: 100px;
+    height: auto;
+    /* Règle le problème du flou/sombre : */
+    filter: brightness(0) invert(1) drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+    /* brightness(0) invert(1) force l'image en blanc pur si c'est un PNG noir */
+}
+
+.floating-badge {
+    position: absolute;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    z-index: 3; /* Par-dessus les cercles */
+}
+
+.badge-top { top: 15%; right: -15px; }
+.badge-bottom { bottom: 15%; left: -15px;}
+
+.badge-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.badge-icon img { width: 20px; }
+.green { background: #e1f6ef; }
+.blue { background: #dfe7f9; }
+
+.badge-text { display: flex; flex-direction: column; }
+.badge-text strong { font-size: 0.85rem; color: #1e293b; }
+.badge-text span { font-size: 0.7rem; color: #64748b; }
+
+/* ========================RESPONSIVE ===========================*/
+@media (max-width: 968px) {
+    .header { flex-direction: column; text-align: center; padding: 40px 0; }
+    .header-content { align-items: center; margin-bottom: 50px; }
+    .header-visual { transform: scale(0.8); }
+}
+
+
+
+
+

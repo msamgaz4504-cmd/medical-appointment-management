@@ -1,0 +1,26 @@
+.profile-container{
+    display: flex;
+    flex-direction: column; 
+    gap: 0.5rem;
+
+    
+}
+.profile{
+    background-color: #f9fafb;
+    padding: 3rem 4rem;
+    
+}
+
+/*========================Responsive=============================*/
+@media (max-width: 425px) {
+    .profile-container h1 {
+        font-size: 20px; 
+    }
+    .profile-container p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    .profile-container {
+        padding: 0 10px;
+    }
+}

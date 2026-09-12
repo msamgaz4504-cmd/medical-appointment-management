@@ -1,0 +1,19 @@
+.services-section{
+    text-align: center; 
+    margin: 80px;
+     
+}
+
+.services-section h1{
+    color: #1e293b;
+    font-size: 2rem;
+    
+}
+
+.services-section  p{
+    color: #6e6e6e;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
+
+

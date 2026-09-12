@@ -1,0 +1,154 @@
+.reservation-section{
+    background-color: #f9fafb;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin: 20px 0;
+    width: 100vw;
+}
+
+.reservation-section-container{
+    padding-top: 20px;
+    width: 87%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+
+
+}
+
+.horaires{
+    padding-top: 90px;
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column; /* empile verticalement */
+    justify-content: center;
+    gap: 1rem;
+    
+
+}
+.processus-reservation{
+    flex: 1 1 400px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    gap: 1.5rem;
+    
+    
+    background-color: #ffffff;
+    margin-top: 42px;
+    padding: 35px 36px 30px 36px;
+    border-radius: 17px;
+}
+.horaires-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+.horaires-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.horaires h1{
+    color: #1e293b;
+}
+.horaire-right {
+  color: #1e293b;
+}
+.horaire-left{
+    color: #1e293b;
+}
+
+.horaire-urgent{
+    display: flex;
+    background-color: #eaf0fb;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px 20px 10px 10px;
+    gap: 0.5rem;
+}
+
+.horaire-urgent p{
+    display: flex;
+    color: #1e293b;
+    font-size: smaller;
+    align-items: center;
+}
+.horaire-urgent img{
+    border-radius: 50%;
+    border: 0.5px solid #2563eb;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+/*---------------------------processus-reservation----------------------------------------------*/
+.processus-reservation h1{
+    font-size: 28px;
+    color: #1e293b;
+}
+
+.processus img{
+    background-color: #2563eb;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.processus-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem ;
+}
+
+.processus{
+    display: flex;
+    gap: 1rem;
+    background-color: #f9fafb;
+    border-radius: 10px;
+    padding: 15px;
+    
+}
+
+.reservation-btn{
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: medium;
+    cursor: pointer;
+    width: 100%;
+}
+.reservation-btn:hover{
+    filter: brightness(120%);
+}
+
+@media (max-width: 768px) {
+    .reservation-section-container {
+        width: 90%; /* On prend plus de place sur mobile */
+        gap: 0; 
+            /* On réduit l'espace entre les blocs empilés */
+    }
+
+    .processus-reservation {
+        margin-top: 20px; /* Moins d'espace en haut sur mobile */
+        padding: 20px;    /* Padding réduit pour gagner de la place */
+    }
+    .horaires{
+        padding-top: 20px;
+    }
+}

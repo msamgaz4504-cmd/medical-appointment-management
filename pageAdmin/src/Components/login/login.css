@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+/* LoginSingup */
+.sign-login {
+    color: #1e293b;
+}
+.inscription-page {
+    background-color: #f8fafc;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    -ms-overflow-style: none;
+}
+
+.main-container {
+    margin: 50px 0;
+}
+
+.form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.form {
+    background-color: white;
+    width: 375px;
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.div-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-field {
+    height: 40px;
+    width: 300px;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    outline: none; 
+}
+
+.input-field:focus {
+    border: 1px solid #0077CC;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.button-field {
+    background-color: #0077CC;
+    color: white;
+    height: 40px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-field:hover {
+    background-color: #0077ccc8;
+}
+
+.subtitle {
+    color: #555;
+}
+
+.a-field {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.exemple {
+    background-color: rgba(220, 220, 220, 0.169);
+    color: #201f1f;
+    width: 300px;
+    margin-top: 10px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.comptes-test {
+    color: #555 !important;
+    margin-top: 6px;
+}

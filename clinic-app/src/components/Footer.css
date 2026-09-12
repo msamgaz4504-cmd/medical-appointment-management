@@ -1,0 +1,114 @@
+.footer-section{
+    background-color: #111827;
+    width: 100%;
+    padding: 3rem 0;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+.footer-container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* centre horizontalement */
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-left{
+    flex: 2;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.footer-right, .footer-medium{
+    flex: 1;
+    display: flex;
+    min-width: 150px;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.logo h4{
+    color: #ffff;
+    font-weight: 700;
+}
+.footer-container h4{
+    color: #ffff;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    background-color: #2563eb ;
+    border: 10px solid #2563eb ;
+    border-radius: 10px;
+    width: 40px;
+}
+.footer-left p{
+    color: #9ca3af;
+}
+
+.ma-list li {
+    color: #6e6e6e;
+}
+
+.ma-list {
+    display: flex;
+    flex-direction: column;   /* éléments sur une ligne */
+    padding: 0;
+    margin: 0;
+    gap: 1rem;  /* centre verticalement par rapport à la ligne */
+    
+}
+.ma-list li, .ma-list a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.ma-list a:hover {
+    color: #ffffff;
+}
+/*======================= TABLETTE (768px) ===================*/
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* On empile les éléments */
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .footer-left, .footer-medium, .footer-right {
+        align-items: center; /* Centre le contenu */
+        width: 100%;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+}
+
+/*======================= MOBILE (375px et moins) ===================*/
+@media (max-width: 375px) {
+    .footer-section {
+        padding: 2rem 0;
+    }
+
+    .logo h4 {
+        font-size: 0.9rem;
+    }
+
+    .footer-left p {
+        font-size: 0.85rem;
+    }
+
+    .ma-list {
+        gap: 1.2rem; /* Plus d'espace pour cliquer avec le doigt */
+    }
+}
+
+

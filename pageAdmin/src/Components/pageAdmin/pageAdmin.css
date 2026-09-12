@@ -1,0 +1,321 @@
+/* pageAdmin.css */
+.pageAdmin {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:  #f8fafc;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.headerAdmin {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e4e8d0;
+}
+
+.headerAdmin h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.headerAdmin p {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* Input Cards Container */
+.pageAdmin > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Input Card Component */
+.inputAdmin {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.inputAdmin img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.inputAdmin .inputAdmin {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+.inputAdmin .description {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.inputAdmin .number {
+    font-size: 30px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* Today Appointment Section */
+.todayAppointment {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.headerTodayAppointment {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e4e8;
+}
+
+.headerTodayAppointment img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.headerTodayAppointment p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.bodyTodayAppointment {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.bodyTodayAppointment img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+
+.bodyTodayAppointment p {
+    font-size: 16px;
+    color: #95a5a6;
+    margin: 0;
+}
+
+/* All Appointments Section */
+.allAppointments {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+.allAppointments > p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e4e8;
+}
+
+/* Table Styles - 100% width */
+.appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.appointments-table thead {
+    background-color: #f8f9fa;
+}
+
+.appointments-table th {
+    text-align: left;
+    padding: 15px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e0e4e8;
+}
+
+.appointments-table td {
+    padding: 15px 12px;
+    font-size: 14px;
+    color: #2c3e50;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.appointments-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Patient Cell */
+.patient-cell {
+    min-width: 180px;
+}
+
+.patient-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.patient-name {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.patient-email {
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+/* Statut Badges */
+.statut-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.statut-confirmé {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.statut-annulé {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.statut-en attente {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Actions Cell */
+.actions-cell {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px 8px;
+    margin: 0 3px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    opacity: 0.7;
+}
+
+.action-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.edit-btn:hover {
+    background-color: #d4edda;
+}
+
+.delete-btn:hover {
+    background-color: #f8d7da;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pageAdmin {
+        padding: 15px;
+    }
+
+    .headerAdmin h2 {
+        font-size: 24px;
+    }
+
+    .pageAdmin > div:nth-child(2) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .inputAdmin {
+        padding: 15px;
+    }
+
+    .inputAdmin .number {
+        font-size: 24px;
+    }
+
+    .appointments-table th,
+    .appointments-table td {
+        padding: 10px 8px;
+    }
+
+    .patient-cell {
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pageAdmin > div:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
+
+    .headerTodayAppointment p,
+    .allAppointments > p {
+        font-size: 18px;
+    }
+
+    .action-btn {
+        font-size: 16px;
+        padding: 4px 6px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .pageAdmin {
+        padding: 30px 40px;
+    }
+}
