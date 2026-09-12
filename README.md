@@ -1,4 +1,4 @@
-# Gestion des rendez-vous d’un cabinet médical
+﻿# Gestion des rendez-vous d’un cabinet médical
 
 Application web permettant aux patients de prendre et de gérer leurs rendez-vous médicaux, ainsi qu’à l’administrateur de superviser les réservations et les créneaux disponibles.
 
@@ -78,8 +78,8 @@ Avant de lancer le projet, installez :
 ### 1. Cloner le dépôt
 
 ```bash
-git clone URL_DU_DEPOT
-cd mini_projet
+git clone https://github.com/msamgaz4504-cmd/medical-appointment-management.git
+cd medical-appointment-management
 ```
 
 Remplacez `URL_DU_DEPOT` par l’adresse du dépôt GitHub.
@@ -235,3 +235,4 @@ Ces identifiants sont exclusivement destinés à la démonstration.
 * Meryem Samgaz
 
 Projet réalisé à l’ENSA Safi sous l’encadrement de M. Othman Chahbouni.
+
