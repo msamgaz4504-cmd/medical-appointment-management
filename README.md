@@ -52,7 +52,7 @@ Ce projet a été réalisé dans un cadre académique à l’École Nationale de
 ## Structure du projet
 
 ```text
-mini_projet/
+medical-appointment-management/
 ├── backend/        # API Node.js et Express
 │   ├── config/     # Configuration de la base de données
 │   ├── routes/     # Routes d’authentification, de réservation et d’administration
@@ -82,7 +82,6 @@ git clone https://github.com/msamgaz4504-cmd/medical-appointment-management.git
 cd medical-appointment-management
 ```
 
-Remplacez `URL_DU_DEPOT` par l’adresse du dépôt GitHub.
 
 ### 2. Installer les dépendances du backend
 
