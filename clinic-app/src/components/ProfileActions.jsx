@@ -13,13 +13,13 @@ const ProfileActions = () => {
     const [userId, setUserId] = useState(null);
 
     useEffect(() => {
-        axios.get("http://localhost:5002/api/auth/me", { withCredentials: true })
+        axios.get("/api/auth/me", { withCredentials: true })
             .then(res => setUserId(res.data.id))
             .catch(err => console.log(err));
     }, []);
 
     useEffect(() => {
-    axios.get(`http://localhost:5002/api/rendezvous/mes-reservations`, {withCredentials: true})
+    axios.get(`/api/rendezvous/mes-reservations`, {withCredentials: true})
         .then(res => {
             const transforme = res.data.map(r => {
                 const now = new Date();
@@ -48,7 +48,7 @@ const ProfileActions = () => {
     const countPassed = passedReservation.length ;
     const deleteReservation = async(id) => {
         try{
-            await axios.delete(`http://localhost:5002/api/rendezvous/mes-reservations/${id}`, {withCredentials: true});
+            await axios.delete(`/api/rendezvous/mes-reservations/${id}`, {withCredentials: true});
             setReservation(prev => prev.filter(r => r.id !== id));
             console.log("supprime avec succes");
         }catch (error){

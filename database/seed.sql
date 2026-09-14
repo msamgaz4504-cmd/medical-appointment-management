@@ -1,4 +1,4 @@
-﻿-- Données fictives destinées uniquement à la démonstration
+-- Données fictives destinées uniquement à la démonstration
 -- À exécuter après database/schema.sql dans une base vide
 
 USE reservation_app;

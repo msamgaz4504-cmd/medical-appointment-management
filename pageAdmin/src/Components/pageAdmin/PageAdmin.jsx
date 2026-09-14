@@ -20,7 +20,7 @@ function PageAdmin() {
     useEffect(() => {
         const fetchAppointments = async () => {
             try{
-                const res = await axios.get(`http://localhost:5002/api/admin/`, { withCredentials: true });
+                const res = await axios.get(`/api/admin/`, { withCredentials: true });
                     setAllAppointments(res.data)
 
             }catch (err) {
@@ -33,7 +33,7 @@ function PageAdmin() {
     useEffect(() => {
         const fetchTodayAppointments = async () => {
             try{
-                const res = await axios.get(`http://localhost:5002/api/admin/today`, { withCredentials: true });
+                const res = await axios.get(`/api/admin/today`, { withCredentials: true });
                     setTodayAppointments(res.data)
 
             }catch (err) {
@@ -45,7 +45,7 @@ function PageAdmin() {
 useEffect(() => {
   const fetchStatistics = async () => {
     try {
-      const res = await axios.get("http://localhost:5002/api/admin/stats", { withCredentials: true });
+      const res = await axios.get("/api/admin/stats", { withCredentials: true });
       console.log(res.data);
       setDay(res.data.day);
       setAttente(res.data.attente);

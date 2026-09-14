@@ -6,6 +6,13 @@ const db = require("../config/db");
 const router = express.Router();
 const salt = 10;
 
+const cookieOptions = () => ({
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    maxAge: 24 * 60 * 60 * 1000
+});
+
 
 
 const verifyUser = (req, res, next) => {
@@ -58,14 +65,14 @@ router.post('/sign-up', (req, res) => {
         db.query(sql, values, (err, result) => {
             if (err) {
                 console.log("Erreur MySQL:", err); 
-                return res.status(500).json({Error: "Inserting data Error in server", details: err});
+                return res.status(500).json({Error: "Inserting data Error in server"});
             }
             const userId = result.insertId; 
             const prenom = req.body.prenom;
             const role = "user";
             const token = jwt.sign({ id: userId, prenom, role }, process.env.JWT_SECRET, { expiresIn: "1d" });
 
-            res.cookie("token", token, { httpOnly: true });
+            res.cookie("token", token, cookieOptions());
             return res.status(201).json({ Status: "Success", prenom });
         });
     });
@@ -84,7 +91,7 @@ router.post('/log-in', (req, res) => {
                     const id = data[0].id;
                     const role = data[0].role
                     const token = jwt.sign({prenom, id, role}, process.env.JWT_SECRET, {expiresIn: "1d"});
-                    res.cookie('token', token);
+                    res.cookie("token", token, cookieOptions());
                     return res.json({Status: "Success"});
                 } else {
                     return res.json({Error: "Password not matched"});

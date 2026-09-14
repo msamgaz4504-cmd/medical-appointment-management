@@ -18,7 +18,7 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5002/api/auth/log-in', values)
+        axios.post('/api/auth/log-in', values)
         .then(res => {
             if(res.data.Status === "Success") {
                 navigate('/profil');

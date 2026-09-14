@@ -7,7 +7,7 @@ function TodayAppointment({ todayAppointments, setTodayAppointments }) {
 
     const handleConfirm = async(id) => {
         try{
-            await axios.put(`http://localhost:5002/api/admin/modifier/${id}/statut`, {statut : "confirme"}, { withCredentials: true });
+            await axios.put(`/api/admin/modifier/${id}/statut`, {statut : "confirme"}, { withCredentials: true });
             setTodayAppointments(prev => prev.map(a => a.id === id ? { ...a, statut: "confirme" } : a));
         }catch(err) {
             console.error(err);
@@ -16,7 +16,7 @@ function TodayAppointment({ todayAppointments, setTodayAppointments }) {
 
      const handleCancel = async(id) => {
         try{
-            await axios.put(`http://localhost:5002/api/admin/modifier/${id}/statut`, {statut : "annule"}, { withCredentials: true });
+            await axios.put(`/api/admin/modifier/${id}/statut`, {statut : "annule"}, { withCredentials: true });
             setTodayAppointments(prev => prev.map(a => a.id === id ? { ...a, statut: "annule" } : a));
         }catch(err) {
             console.error(err);

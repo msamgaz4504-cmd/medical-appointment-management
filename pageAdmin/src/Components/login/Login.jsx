@@ -19,7 +19,7 @@ function Login() {
 
     try {
         const res = await axios.post(
-            "http://localhost:5002/api/auth/log-in",
+            "/api/auth/log-in",
             values,
             { withCredentials: true }
         );

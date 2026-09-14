@@ -21,7 +21,7 @@ function Signup() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Valeurs envoyées:", values);
-        axios.post('http://localhost:5002/api/auth/sign-up', values)
+        axios.post('/api/auth/sign-up', values)
         .then(res => {
             if(res.data.Status === "Success") {
                 navigate('/profil');

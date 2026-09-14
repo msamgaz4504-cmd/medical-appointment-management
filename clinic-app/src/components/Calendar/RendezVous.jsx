@@ -16,7 +16,7 @@ function RendezVous({ jourSelectionne, heureSelectionne }) {
             return;
         }
 
-        axios.post("http://localhost:5002/api/rendezvous/reserver", {
+        axios.post("/api/rendezvous/reserver", {
             
             date: jourSelectionne.toISOString().split('T')[0], 
             heure: heureSelectionne,

@@ -16,7 +16,7 @@ const MyProfile = () => {
   useEffect(() => {
     const fetchPrenom = async () => {
       try {
-        const res = await axios.get("http://localhost:5002/api/auth/profil");
+        const res = await axios.get("/api/auth/profil");
         if(res.data.Status === "Success") {
           setPrenom(res.data.prenom); 
         }
